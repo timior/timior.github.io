@@ -1,3 +1,17 @@
-// build time:Sun May 21 2017 14:17:41 GMT+0800 (中国标准时间)
-$(document).ready(function(){var n=$(".header-inner");var r=$("#sidebar");var e=function(){return n.height()+CONFIG.sidebar.offset};var i=function(n){return r.css({"margin-top":n})};var a=window.matchMedia("(min-width: 991px)");i(e()).show();a.addListener(function(n){if(n.matches){i(e())}})});
-//rebuild by neat 
+$(document).ready(function () {
+  var $headerInner = $('.header-inner');
+  var $sidebar = $('#sidebar');
+  var getSidebarTop = function(){
+    return $headerInner.height() + CONFIG.sidebar.offset;
+  };
+  var setSidebarMarginTop = function(sidebarTop){
+    return $sidebar.css({ 'margin-top': sidebarTop });
+  };
+  var mql = window.matchMedia('(min-width: 991px)');
+  setSidebarMarginTop(getSidebarTop()).show();
+  mql.addListener(function(e){
+    if(e.matches){
+      setSidebarMarginTop(getSidebarTop());
+    }
+  });
+});
