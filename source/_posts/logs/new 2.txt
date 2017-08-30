@@ -1,0 +1,12 @@
+python-urlgrabber-3.10-8.el7.noarch
+yum-3.4.3-150.el7.centos.noarch
+
+rpm-libs-4.11.3-21.el7.x86_64
+rpm-4.11.3-21.el7.x86_64
+rpm-build-libs-4.11.3-21.el7.x86_64
+rpm-python-4.11.3-21.el7.x86_64
+
+libcurl-7.29.0-35.el7.centos.x86_64
+curl-7.29.0-35.el7.centos.x86_64
+
+wget-1.14-13.el7.x86_64
