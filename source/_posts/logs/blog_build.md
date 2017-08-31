@@ -66,7 +66,8 @@ git push origin branch-source
 ```
 3、为了能够便捷的管理，编写辅助脚本(所谓便捷:就是能一条语句解决的问题,绝不写两条)，将脚本与hexo脚本至于同一目录(在git Bash中使用`which hexo` 可查找hexo所在目录),脚本名称取为hexoo（注:文件名不应有后缀）
 其中:hexoo spush 执行hexo deploy,并从博客的source目录拷贝文件到branch-source分支(即从本地同步都远程github)
-其中:hexoo spull 执行git pull origin branch-source 将远程github上branch-source分支拷贝到博客的source文件夹（即从远程github同步到本地）
+其中:hexoo spull 执行git pull origin branch-source 将远程github上branch-source分支拷贝到博客的source文件夹（即从远程github同步到本地)
+其中:--config "$themeConf","$themeConf",使用hexo 3.0的新特性,以便于统一管理插件的升级(参考[next的安装说明](https://github.com/iissnan/hexo-theme-next))
 ```
 #!/bin/sh
 # blogRoot Hexo博客的根目录
