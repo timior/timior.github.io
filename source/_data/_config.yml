@@ -104,4 +104,5 @@ deploy:
   repo:
     github: git@github.com:timior/timior.github.io.git
     coding: git@git.coding.net:timior/timior.git
+    gitee:  git@gitee.com:timior/blog.git
   branch: master
