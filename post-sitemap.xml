@@ -47,7 +47,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/logs/centos7_install_ansible/</loc>
+        <loc>http://yoursite.com/logs/centos7_install_ambari_node_6/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -55,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/logs/centos7_install_ambari_node_6/</loc>
+        <loc>http://yoursite.com/logs/centos7_install_ansible/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
