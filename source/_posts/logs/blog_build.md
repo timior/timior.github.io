@@ -64,11 +64,12 @@ git add .
 git commit -m "blog source file"
 git push origin branch-source
 ```
-3、为了能够便捷的管理，编写辅助脚本(所谓便捷:就是能一条语句解决的问题,绝不写两条)，将脚本与hexo脚本至于同一目录(在git Bash中使用`which hexo` 可查找hexo所在目录),脚本名称取为hexoo（注:文件名不应有后缀）
-其中:hexoo spush 执行hexo deploy,并从博客的source目录拷贝文件到branch-source分支(即从本地同步都远程github)
-其中:hexoo spull 执行git pull origin branch-source 将远程github上branch-source分支拷贝到博客的source文件夹（即从远程github同步到本地)
-其中:--config "$themeConf","$themeConf",使用hexo 3.0的新特性,以便于统一管理插件的升级(参考[next的安装说明](https://github.com/iissnan/hexo-theme-next))
-```
+3、为了能够便捷的管理，编写辅助脚本(所谓便捷:就是能一条语句解决的问题,绝不写两条)，将脚本与hexo脚本至于同一目录(在git Bash中使用`which hexo`可查找hexo所在目录),脚本名称取为hexoo（注:文件名不应有后缀） 
+其中: `hexoo spush ` 执行hexo deploy,并从博客的source目录拷贝文件到branch-source分支(即从本地同步都远程github)
+其中: `hexoo spull ` 执行`git pull origin branch-source` 将远程github上branch-source分支拷贝到博客的source文件夹（即从远程github同步到本地)
+其中: `--config "$themeConf","$themeConf `,使用hexo 3.0的新特性,以便于统一管理插件的升级(参考[next的安装说明](https://github.com/iissnan/hexo-theme-next))
+
+``` 
 #!/bin/sh
 # blogRoot Hexo博客的根目录
 blogRoot="/d/WorkSpace/myblog/blog"
@@ -119,7 +120,9 @@ else
 	echo "hexoo spull		# git pull origin branch-source,get remote source file and merge it to local file,then copy to blogroot/source"
 	echo ""
 fi
+
 ```
+
 ## Markdown 编辑工具[Typora](https://www.typora.io/)
 
 由于Hexo不能够在页面上实时显示正在编写的文档，每次查看编写效果都需要执行如下指令，繁琐而不直观。
@@ -134,7 +137,7 @@ $ hexo server
 ## Hexo 页面底部注释
 由hexo的模板自动生成的页面，在底部默认会有版权和主体的注释，如图：
 ![](http://oqaxv1vwu.bkt.clouddn.com//image/blog/logs/blog_build/blog_copyright_orignal.PNG)
-容易暴露个人智商，作为强迫症患者，简直无法忍受。经过查找，底框代码是在：{% raw %} blog\themes\next\layout\_partials\ {% endraw %}目录下的footer.swig文件里说明的，修改文件内容如下：
+容易暴露个人智商，作为强迫症患者，简直无法忍受。经过查找，底框代码是在：``` blog\themes\next\layout\_partials\ ```目录下的footer.swig文件里说明的，修改文件内容如下：
 ``` codes
 <div class="copyright" >
   {% set current = date(Date.now(), "YYYY") %}                
