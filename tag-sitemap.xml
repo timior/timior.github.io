@@ -2,14 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://yoursite.com/tags/Centos7-Ansible/</loc>
+        <loc>http://yoursite.com/tags/Centos7-Ambari/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/Centos7-Ambari/</loc>
+        <loc>http://yoursite.com/tags/Centos7-Ansible/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -23,7 +23,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/SparkShell/</loc>
+        <loc>http://yoursite.com/tags/SparkJob/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -37,7 +37,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/SparkJob/</loc>
+        <loc>http://yoursite.com/tags/SparkShell/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
