@@ -35,105 +35,90 @@ Hexo主程序并不对生成的页面进行优化，致使页面内容稀疏，�
 方式一：使用gulp插件，自行编写优化脚本，如[hexo博客－性能优化](http://www.cnblogs.com/jarson-7426/p/5660424.html)
 方式二：使用Hexo软件的配套插件，如：[hexo-neat](https://github.com/rozbo/hexo-neat) 、[hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier)、[hexo-filter-cleanup](https://github.com/mamboer/hexo-filter-cleanup)
 
-本博客采用的是[hexo-neat](https://github.com/rozbo/hexo-neat)插件
-
-1、插件有两种下载方式
-方式一：使用密令行
- ``` bash
-$ npm install hexo-neat --save
- ```
-方式二：登录插件的commit分支页面（如[hexo-neat](https://github.com/rozbo/hexo-neat/commits/master)），手工下插件并将其解压到 "blog根目录\node_modules" 目录下, 注意插件前缀是"hexo-..."
-
-2、下载完插件后，修改站点的配置文件 _config.yml ,加入相关的压缩配置
-``` bash
-## Hexo-neat config
-neat_enable: true
-neat_html:
-  enable: true
-  exclude:
-neat_css:
-  enable: true
-  exclude:
-    - '*.min.css'
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
-    - '*.min.js'
+本博客采用的是[hexo-all-minifier](https://github.com/chenzhutian/hexo-all-minifier)插件
 ```
-
-值得注意的是：由于Hexo版本升级等原因，在插件的使用说明里并没有说明需要在配置文件里 package.json 增加插件依赖
-如下增加了"hexo-neat": "^1.0.4",依赖项
- ``` bash
-    "dependencies": {
-    "hexo": "^3.2.0",
-    "hexo-deployer-git": "^0.3.0",
-    "hexo-generator-archive": "^0.1.4",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-index": "^0.2.1",
-    "hexo-generator-tag": "^0.2.0",
-    "hexo-neat": "^1.0.4",
-    "hexo-renderer-ejs": "^0.2.0",
-    "hexo-renderer-marked": "^0.2.10",
-    "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.2.0",
-    "stream-to-array": "^2.3.0"
-  }
- ```
-如果增加依赖后，使用 hexo generate 指令生成页面时报错找不到 stream-to-array 等依赖，使用cnpm直接安装即可
-``` bash
-$ cnpm install stream-to-array --save
+ npm install hexo-all-minifier --save
+# hexo 的根目录下修改配置文件
+ all_minifier: true
 ```
 
 
 ## git管理博客
+使用Hexo搭建的博客，其源文件(.md文件)并不会上传到git上去，当更换电脑或者重装系统，博客的管理将会是个问题，个人尝试使用分支的方式来管理个人博客
+1. 在博客搭建好后，在博客的根目录下创建git分支,如：我的博客根目录为/d/WorkSpace/myblog/blog,首先打开git Bash(使用ssh方式,需先在github上增加本地rsa公钥) 使用`git checkout --orphan branch-sourcen` 创建无关分支（--orphan），并将其提交到远程的github上，这时在githup上将会看到两个分支
+提交成功，删除从master分支继承过来的所有无用文件
+2. 将博客根目录下的source文件拷贝到步骤1创建的分支目录中，之后提交到远程githup
+操作命令如下
+```
+# 个人博客根目录为/d/WorkSpace/myblog/blog，githup博客地址为timior.github.io
+cd /d/WorkSpace/myblog/blog
+git clone git@github.com:timior/timior.github.io.git
+git checkout --orphan branch-source
+cd timior.github.io
+git add .
+git commit -m "create branch-source"
+git push origin branch-source
+git rm -rf .
+cp -rf ../source .
+git add .
+git commit -m "blog source file"
+git push origin branch-source
+```
+3、为了能够便捷的管理，编写辅助脚本(所谓便捷:就是能一条语句解决的问题,绝不写两条)，将脚本与hexo脚本至于同一目录(在git Bash中使用`which hexo` 可查找hexo所在目录),脚本名称取为hexoo（注:文件名不应有后缀）
+其中:hexoo spush 执行hexo deploy,并从博客的source目录拷贝文件到branch-source分支(即从本地同步都远程github)
+其中:hexoo spull 执行git pull origin branch-source 将远程github上branch-source分支拷贝到博客的source文件夹（即从远程github同步到本地）
+```
+#!/bin/sh
+# blogRoot Hexo博客的根目录
+blogRoot="/d/WorkSpace/myblog/blog"
+repoName="timior.github.io"
+rootConf=source/_data/next.yml
+themeConf=source/_data/_config.yml
 
-使用git工具对blog文件进行管理有两个必要性
-其一：当修改博客出错时可以用来恢复。
-其二：使用 hexo deploy 发布的博客，有许多内容并不会上传到github上面，而仅仅存储在本地，因此只能在同一台主机上编辑博客。
+cd "$blogRoot"
 
-使用git管理博客步骤如下：
-由于hexo也是使用git工具进行部署的，因此如果在博客根目录下使用 git init 来创建Repository，会和hexo创建的Repository发生冲突，因此可采用 父-子 目录的方式进行规避，将Hexo创建的博客作为子目录，至于git管理的父目录下，结构示意如下：
- ``` bash
-+--myblog     			#git 文件管理目录
-|	|
-|	+ --blog			#Hexo 博客目录
-|	|	|
-|	|	source
-|	|	_config.yml
-|	|	...
-|	|
-|	+ --.git			#git参数文件
-|	|	|
-|	|	index
-|	|
- ```
-1、打开git bush，进入git根目录/myblog执行git init
- ``` bash
-$ git init
- ```
-2、修改博客根目录下的 myblog/bolg/.gitignore 文件，仅保留public/，该文件是hexo生成的博客页面文件，不必要使用git管理（经过测试，这个步不做也是可行的）
- ``` bash
-#.DS_Store
-#Thumbs.db
-#db.json
-#*.log
-#node_modules/
-public/
-#.deploy_git/
- ```
-3、使用git add . 添加所有文件，如果 git 报错 Filename too long ，执行 git config --global core.longpaths true 修改git配置即可，如果有依赖文件目录添加失败，检查该目录下是否存在 .git文件夹，如果存在则说明该目录下的文件是属于另外一个repository仓库的，一种可行的解决方式是直接删除该目录，登录github直接下载该依赖文件，将其替换掉即可。（凡是使用 git clone https://github.com/iissnan/hexo-theme-next themes/next 等密令下载的插件都包含 .git文件夹，均需登录 githut 直接下压缩包文件进行替换）
-4、使用git commit -m "first commmit"计较
-5、登录github，为博客的源文件创建一个空的仓库，按照github提示，将文件上传到github
-5、其他主机登录步骤
-	一：搭建好Hexo环境，创建博客根目录
-	二：使用git使用git clone https://github.com/xxx/myblog.git 命令下载git上传的文件即可。
-	注意：整个过程都无需再次使用 hexo init 指令，来初始化文件夹，安装好hexo后只需执行 npm install 密令安装来安装hexo server
-
-
-
+if [[ "$1" == g* ]]
+then
+	hexo clean --config "$themeConf","$themeConf"
+	hexo generate --config "$themeConf","$themeConf"
+elif [[ "$1" == se* ]]
+then
+	hexo clean --config "$themeConf","$themeConf"
+	hexo generate --config "$themeConf","$themeConf"
+	hexo server --config "$themeConf","$themeConf"
+elif [[ "$1" == d* ]]
+then
+ 	hexo clean --config "$themeConf","$themeConf"
+	hexo generate --config "$themeConf","$themeConf"
+	hexo deploy --config "$themeConf","$themeConf"
+elif [[ "$1" == spush* ]]
+then
+	hexo clean --config "$themeConf","$themeConf"
+	hexo generate --config "$themeConf","$themeConf"
+	hexo deploy --config "$themeConf","$themeConf"
+ 	cd "$repoName/"
+	git pull origin branch-source
+	cp -rf ../source/ .
+	git add .
+	git commit -m "`date`"
+	git push origin branch-source
+elif [[ "$1" == spull* ]]
+then
+ 	cd "$repoName/"
+	git checkout branch-source
+	rm -rf source
+	git pull origin branch-source
+	cp -rf source/ ../
+else
+	echo "Usage:" 
+	echo "hexoo g			# hexo clean && generate"
+	echo "hexoo s			# hexo clean && generate && server"
+	echo "hexoo d			# hexo clean && generate && deploy"
+	echo "hexoo spush		# hexo clean && generate && deploy && deploy source file to branch-source"
+	echo "hexoo spull		# git pull origin branch-source,get remote source file and merge it to local file,then copy to blogroot/source"
+	echo ""
+fi
+```
 ## Markdown 编辑工具[Typora](https://www.typora.io/)
 
 由于Hexo不能够在页面上实时显示正在编写的文档，每次查看编写效果都需要执行如下指令，繁琐而不直观。
