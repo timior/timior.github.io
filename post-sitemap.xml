@@ -7,16 +7,16 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/logs/blog_build/</loc>
-        <lastmod>2017-08-31T12:55:24.034Z</lastmod>
+        <loc>http://yoursite.com/hexo/build_blog_on_baidu_bae/</loc>
+        <lastmod>2017-09-02T18:09:35.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
-        <lastmod>2017-08-31T10:33:06.284Z</lastmod>
+        <loc>http://yoursite.com/hexo/build_blog_on_github/</loc>
+        <lastmod>2017-09-02T15:48:57.739Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,6 +24,14 @@
 
     <url>
         <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
+        <lastmod>2017-08-31T10:33:06.284Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -47,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/logs/centos7_install_ansible/</loc>
+        <loc>http://yoursite.com/logs/centos7_install_ambari_node_6/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -55,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/logs/centos7_install_ambari_node_6/</loc>
+        <loc>http://yoursite.com/logs/centos7_install_ansible/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

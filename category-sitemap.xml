@@ -7,6 +7,13 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/categories/logs/</loc>
+        <lastmod>2017-08-31T10:33:06.274Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://yoursite.com/categories/Bigdata/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -21,8 +28,8 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/categories/logs/</loc>
-        <lastmod>2017-08-31T12:55:24.034Z</lastmod>
+        <loc>http://yoursite.com/categories/hexo/</loc>
+        <lastmod>2017-09-02T18:09:35.820Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
