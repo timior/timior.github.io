@@ -106,7 +106,7 @@
 <meta property="og:image" content="http://yoursite.com/images/hexo/2017-09-03_015157.png">
 <meta property="og:image" content="http://yoursite.com/images/hexo/2017-09-03_020035.png">
 <meta property="og:image" content="http://yoursite.com/images/hexo/2017-09-03_020806.png">
-<meta property="og:updated_time" content="2017-09-02T18:09:35.820Z">
+<meta property="og:updated_time" content="2017-09-02T18:30:55.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="个人博客搭建过程随手笔记-Hexo-Baidu BAE">
 <meta name="twitter:description" content="历经一波三折，最后选择将博客托管在了百度云的“应用引擎BAE”上，基本符合博客的需要的所有参考因素。  其一：服务器在国内，访问速度快。  其二：百度自家产品，博客内容更易被百度爬虫抓取。  其三:可以进行个人域名备案，这对需要使用CDN等额外服务的需求来说极为重要。  其四：这也是最重要的一点，那就是便宜，1毛钱1天，一个月才三块，且1毛钱的配置资源性能却完全满足需求，比起购买云主机，这欢喜">
@@ -458,8 +458,13 @@
 </li>
 <li><p>在操作栏下，下拉箭头，查看发布设置，找到代码仓库的git地址，修改hexo配置文件里设置的git提交的仓库即可，需要注意的一点是，系统默认是不自动更新页面git提交的内容的，需要将自动发布设置设为开即可<br><img src="../../images/hexo/2017-09-03_020035.png" alt="" title="部署“应用引擎BAE”"></p>
 </li>
-<li><p>资源占用<br><img src="../../images/hexo/2017-09-03_020806.png" alt="" title="资源占用"></p>
+<li><p>hexo deploy错误，这个错误是百度云-BAE的git配置存在问题，只需在hexo deploy执行前修改下参数即可<br>hexo提交报错信息如下，意思http curl的的长度不够，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Everything up-to-date</div><div class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</div><div class="line">Error: fatal: The remote end hung up unexpectedly</div><div class="line">fatal: The remote end hung up unexpectedly</div><div class="line">error: RPC failed; HTTP 411 curl 22 The requested URL returned error: 411 Length Required</div><div class="line">Everything up-to-date</div></pre></td></tr></table></figure>
 </li>
+</ol>
+<p>修改git 配置，增加git传输的字节限制<br>git config –global http.postBuffer  524288000</p>
+<ol>
+<li>资源占用<br><img src="../../images/hexo/2017-09-03_020806.png" alt="" title="资源占用"></li>
 </ol>
 
       

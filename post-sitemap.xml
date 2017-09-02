@@ -8,7 +8,7 @@
 
     <url>
         <loc>http://yoursite.com/hexo/build_blog_on_baidu_bae/</loc>
-        <lastmod>2017-09-02T18:09:35.820Z</lastmod>
+        <lastmod>2017-09-02T18:30:55.526Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -55,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/logs/centos7_install_ambari_node_6/</loc>
+        <loc>http://yoursite.com/logs/centos7_install_ansible/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -63,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/logs/centos7_install_ansible/</loc>
+        <loc>http://yoursite.com/logs/centos7_install_ambari_node_6/</loc>
         <lastmod>2017-08-31T10:33:06.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
