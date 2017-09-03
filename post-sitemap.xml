@@ -8,7 +8,7 @@
 
     <url>
         <loc>http://yoursite.com/hexo/build-blog-on-github/</loc>
-        <lastmod>2017-09-03T17:01:18.827Z</lastmod>
+        <lastmod>2017-09-03T17:17:15.248Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,7 @@
 
     <url>
         <loc>http://yoursite.com/hexo/build-blog-on-baidu-bae/</loc>
-        <lastmod>2017-09-03T17:00:57.423Z</lastmod>
+        <lastmod>2017-09-03T17:17:06.439Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -55,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -63,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
