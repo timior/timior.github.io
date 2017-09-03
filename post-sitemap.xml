@@ -15,6 +15,14 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/hexo/build-blog-on-baidu-bae2/</loc>
+        <lastmod>2017-09-03T05:56:30.915Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/bigdata/ansible/centos7-install-ansible/</loc>
         <lastmod>2017-09-03T05:00:41.995Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -55,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -63,7 +71,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
