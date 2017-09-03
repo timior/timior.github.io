@@ -319,6 +319,10 @@ han: false
 # Baidu Analytics ID
 baidu_analytics: c7601727613442a50a5786234b60a79e
 
+# Site verification
+#google_site_verification: flse
+baidu_site_verification: VgsGUoKDcB
+
 # Duoshuo ShortName
 #duoshuo_shortname:
 
