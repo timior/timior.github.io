@@ -22,8 +22,8 @@
         <category>Spark</category>
       </categories>
       <tags>
-        <tag>WordCount</tag>
         <tag>SparkJob</tag>
+        <tag>WordCount</tag>
       </tags>
   </entry>
   <entry>
@@ -35,8 +35,8 @@
         <category>Spark</category>
       </categories>
       <tags>
-        <tag>SparkShell</tag>
         <tag>WordCount</tag>
+        <tag>SparkShell</tag>
       </tags>
   </entry>
   <entry>
