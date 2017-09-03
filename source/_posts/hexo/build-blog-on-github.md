@@ -2,7 +2,7 @@
 title: 个人博客搭建过程随手笔记-Hexo-Github
 date: 2017-05-20 02:50:38
 category:
-	- Hexo
+	- hexo
 tags:
 	- Hexo
 	- Github

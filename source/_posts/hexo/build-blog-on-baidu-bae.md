@@ -2,7 +2,7 @@
 title: 个人博客搭建过程随手笔记-Hexo-Baidu BAE
 date: 2017-09-2
 category:
-	- Hexo
+	- hexo
 tags: 
 	- Hexo
 	- Github
