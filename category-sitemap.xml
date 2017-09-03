@@ -7,20 +7,6 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/categories/logs/</loc>
-        <lastmod>2017-08-31T10:33:06.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/categories/Bigdata/</loc>
-        <lastmod>2017-08-31T10:33:06.284Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/categories/Bigdata/Spark/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -28,8 +14,36 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/categories/hexo/</loc>
-        <lastmod>2017-09-02T19:15:18.623Z</lastmod>
+        <loc>http://yoursite.com/categories/Bigdata/Ambari/</loc>
+        <lastmod>2017-09-03T04:48:35.846Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/categories/Database/</loc>
+        <lastmod>2017-09-03T04:57:09.130Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/categories/Bigdata/</loc>
+        <lastmod>2017-09-03T05:00:41.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/categories/Bigdata/Ansible/</loc>
+        <lastmod>2017-09-03T05:00:41.995Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/categories/Hexo/</loc>
+        <lastmod>2017-09-03T06:11:59.563Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

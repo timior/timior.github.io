@@ -2,27 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://yoursite.com/tags/Centos7-Ansible/</loc>
-        <lastmod>2017-08-31T10:33:06.272Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/tags/Centos7-Ambari/</loc>
-        <lastmod>2017-08-31T10:33:06.272Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/tags/Centos7-Mysql/</loc>
-        <lastmod>2017-08-31T10:33:06.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/tags/SparkJob/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -44,22 +23,50 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/tags/Centos7/</loc>
+        <lastmod>2017-09-03T04:48:35.846Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Ambari/</loc>
+        <lastmod>2017-09-03T04:48:35.846Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Mysql/</loc>
+        <lastmod>2017-09-03T04:55:24.739Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/tags/Orcale/</loc>
+        <lastmod>2017-09-03T04:57:09.130Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://yoursite.com/tags/Hexo/</loc>
-        <lastmod>2017-09-02T19:15:18.623Z</lastmod>
+        <lastmod>2017-09-03T06:11:59.563Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/github/</loc>
-        <lastmod>2017-09-02T19:15:18.623Z</lastmod>
+        <loc>http://yoursite.com/tags/Github/</loc>
+        <lastmod>2017-09-03T06:11:59.563Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://yoursite.com/tags/bae/</loc>
-        <lastmod>2017-09-02T19:15:18.623Z</lastmod>
+        <loc>http://yoursite.com/tags/Bae/</loc>
+        <lastmod>2017-09-03T06:11:59.563Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
