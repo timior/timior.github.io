@@ -7,7 +7,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Hexo/hexo/build-blog-on-baidu-bae/</loc>
+        <loc>http://yoursite.com/hexo/build-blog-on-baidu-bae/</loc>
         <lastmod>2017-09-03T06:11:59.563Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -15,7 +15,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Bigdata/Ansible/bigdata/ansible/centos7-install-ansible/</loc>
+        <loc>http://yoursite.com/bigdata/ansible/centos7-install-ansible/</loc>
         <lastmod>2017-09-03T05:00:41.995Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -23,7 +23,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Hexo/hexo/build-blog-on-github/</loc>
+        <loc>http://yoursite.com/hexo/build-blog-on-github/</loc>
         <lastmod>2017-09-03T04:57:45.522Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -31,7 +31,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Database/database/centos7-install-oracle/</loc>
+        <loc>http://yoursite.com/database/centos7-install-oracle/</loc>
         <lastmod>2017-09-03T04:57:09.130Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -39,7 +39,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Database/database/centos7-install-mysql/</loc>
+        <loc>http://yoursite.com/database/centos7-install-mysql/</loc>
         <lastmod>2017-09-03T04:55:24.739Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -47,7 +47,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Bigdata/Ambari/bigdata/ambari/centos7-install-ambari/</loc>
+        <loc>http://yoursite.com/bigdata/ambari/centos7-install-ambari/</loc>
         <lastmod>2017-09-03T04:48:35.846Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -55,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Bigdata/Spark/bigdata/spark/spark-wordcount2/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -63,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/Bigdata/Spark/bigdata/spark/spark-wordcount/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
