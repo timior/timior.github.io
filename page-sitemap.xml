@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://yoursite.com/about/about-me.html</loc>
+        <lastmod>2017-09-03T08:20:16.328Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://yoursite.com/tags/</loc>
         <lastmod>2017-08-31T10:33:06.288Z</lastmod>
         <changefreq>weekly</changefreq>

@@ -52,21 +52,21 @@
 
     <url>
         <loc>http://yoursite.com/tags/Hexo/</loc>
-        <lastmod>2017-09-03T06:11:59.563Z</lastmod>
+        <lastmod>2017-09-03T08:20:16.328Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://yoursite.com/tags/Github/</loc>
-        <lastmod>2017-09-03T06:11:59.563Z</lastmod>
+        <lastmod>2017-09-03T08:20:16.328Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://yoursite.com/tags/Bae/</loc>
-        <lastmod>2017-09-03T06:11:59.563Z</lastmod>
+        <lastmod>2017-09-03T08:20:16.328Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
