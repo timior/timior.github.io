@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/hexo/build-blog-on-github/</loc>
+        <lastmod>2017-09-03T17:01:18.827Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://yoursite.com/hexo/build-blog-on-baidu-bae/</loc>
-        <lastmod>2017-09-03T08:20:16.328Z</lastmod>
+        <lastmod>2017-09-03T17:00:57.423Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,14 +25,6 @@
     <url>
         <loc>http://yoursite.com/bigdata/ansible/centos7-install-ansible/</loc>
         <lastmod>2017-09-03T05:00:41.995Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/hexo/build-blog-on-github/</loc>
-        <lastmod>2017-09-03T04:57:45.522Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -55,7 +55,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -63,7 +63,7 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/bigdata/spark/spark-wordcount2/</loc>
+        <loc>http://yoursite.com/bigdata/spark/spark-wordcount/</loc>
         <lastmod>2017-08-31T10:33:06.284Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
