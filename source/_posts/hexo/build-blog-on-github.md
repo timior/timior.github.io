@@ -3,10 +3,9 @@ title: 个人博客搭建过程随手笔记-Hexo-Github
 date: 2017-05-20 02:50:38
 category:
 	- Hexo
-tags: 
+tags:
 	- Hexo
 	- Github
-
 ---
 个人博客的搭建日志，记录博客搭建过程的中的一些心得，由衷感谢Grok的博客对我的指导。
 
