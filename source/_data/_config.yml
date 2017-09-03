@@ -15,8 +15,8 @@ timezone: Asia/Shanghai
 url: http://yoursite.com
 root: /
 #permalink: :year/:month/:day/:title/
-#permalink: :category/:title/
-permalink: :title/
+permalink: :category/:title/
+#permalink: :title/
 permalink_defaults:
 
 # Directory
@@ -102,7 +102,8 @@ deploy:
   type: git
   #repo: https://github.com/timior/timior.github.io.git
   repo:
-    github: git@github.com:timior/timior.github.io.git
+    #github: git@github.com:timior/timior.github.io.git
     #coding: git@git.coding.net:timior/timior.git
     #gitee:  git@gitee.com:timior/timior.git
+    baidu-bae: https://git.duapp.com/appid8c8oabpava
   branch: master
