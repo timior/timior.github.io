@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[个人博客-Hexo-Baidu BAE-源文件托管]]></title>
-    <url>%2Fhexo%2Fbuild-blog-on-baidu-bae2%2F</url>
-    <content type="text"><![CDATA[在将博客托管到百度“应用引擎BAE”的git仓库后，将原来托管在github上的源md文件一起迁移过来，将其托管在分支中。操作与之前的个人博客搭建过程随手笔记-Hexo-Github-git管理博客的步骤相似1、打开Git Bash进入个人博客根目录/d/WorkSpace/myblog/blog1cd /d/WorkSpace/myblog/blog2、克隆到本地，并进入12git clone https://git.duapp.com/appid8c8oabpavacd appid8c8oabpava3、创建与master无共同根节点的分支，并切换到branch-source分支1git checkout --orphan branch-source4、删除从master节点过继来的所有文件1git rm -rf .5、拷贝md源文件目录source文件夹到git分支1cp -rf ../source .6、提交source文件到分支123git add .git commit -m &quot;blog source file&quot;git push origin branch-source再回头聊聊这一波三折，我依次将博客托管在:github,conding,码云oschinagithub:这是最初的选择，原因是搭建的教程很多，容易学习，然而不久或发现，github早在2015年在遭受被劫持的百度广告JS脚本攻击后，就开始屏蔽百度的爬虫了，直接导致了github博客的内容无法被百度收录，外加服务器在国外，访问速度慢，最后无奈舍弃，选择conding。（另外有人测试使用CDN，然而百度收录的效果依旧不理想）conding:最初使用感受还不错，可惜好景不长，突然竟然要收费的，而且价格不低，一年199RMB，如果不开通Vip，就在强制在首页投广告（等待5秒才跳转到博客页面），严重影响使用体验。oschina:在对conding失去信心之后，一直想寻找一个新的平台，之后发现的阿里的oschina，可搭建好不久就发现了oschina是不支持自定义域名的，每次访问要输入一串oschina这么丑的名字，确实揪心。百度云“应用引擎BAE”-博客托管Hexo的配置就不多说了，网上一堆教程，方法步骤都是相同的，这里仅仅介绍百度云“应用引擎BAE”的配置1. 登陆百度云https://cloud.baidu.com/ ,点击应用引擎BAE，并添加部署2. 选择：模板类型选择：所有模板模板场景：所有域名:随意输入类型：lighttpd-static (必须选择这个)代码版本：git(必须选择这个)单元套餐：均选择最低(内存:64M，磁盘:2GB，宽带:5Mb/s),这个带宽确实很良心，买虚拟云主机最低配的带宽才1Mb/s，最后勾选：同意 百度应用引擎服务协议、BAE域名绑定服务协议，下一步，之后支付3. 等待系统部署结束支付完成后再次回到应用引擎BAE–&gt;BAT基础版本–&gt;部署列表，等待系统部署介绍，待状态显示正常(等待大约10秒左右)4. 修改发布设置在操作栏下，下拉箭头，查看发布设置，找到代码仓库的git地址，修改hexo配置文件里设置的git提交的仓库即可，需要注意的一点是，系统默认是不自动更新页面git提交的内容的，需要将自动发布设置设为开即可5. hexo deploy错误这个错误是百度云-BAE的git配置存在问题，只需在hexo deploy执行前修改下参数即可hexo提交报错信息如下，意思http curl的的长度不够，Everything up-to-dateFATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlError: fatal: The remote end hung up unexpectedlyfatal: The remote end hung up unexpectedlyerror: RPC failed; HTTP 411 curl 22 The requested URL returned error: 411 Length RequiredEverything up-to-date修改git 配置，增加git传输的字节限制git config –global http.postBuffer 5242880006. 资源占用###linc_1: https://cloud.baidu.com/ “百度云”总结静态博客快速搭建只需要两点：其一：静态网页生成工具，如Hexo、Jekyll、Octopress其二：静态网页托管环境，如lighttpd，nginx，apache，httpd]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Github</tag>
-        <tag>Bae</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[个人博客搭建过程随手笔记-Hexo-Baidu BAE]]></title>
     <url>%2Fhexo%2Fbuild-blog-on-baidu-bae%2F</url>
     <content type="text"><![CDATA[历经一波三折，最后选择将博客托管在了百度云的“应用引擎BAE”上，基本符合博客的需要的所有参考因素。其一：服务器在国内，访问速度快。其二：百度自家产品，博客内容更易被百度爬虫抓取。其三:可以进行个人域名备案，这对需要使用CDN等额外服务的需求来说极为重要。其四：这也是最重要的一点，那就是便宜，1毛钱1天，一个月才三块，且1毛钱的配置资源性能却完全满足需求，比起购买云主机，这欢喜不用多说。再回头聊聊这一波三折，我依次将博客托管在:github,conding,码云oschinagithub:这是最初的选择，原因是搭建的教程很多，容易学习，然而不久或发现，github早在2015年在遭受被劫持的百度广告JS脚本攻击后，就开始屏蔽百度的爬虫了，直接导致了github博客的内容无法被百度收录，外加服务器在国外，访问速度慢，最后无奈舍弃，选择conding。（另外有人测试使用CDN，然而百度收录的效果依旧不理想）conding:最初使用感受还不错，可惜好景不长，突然竟然要收费的，而且价格不低，一年199RMB，如果不开通Vip，就在强制在首页投广告（等待5秒才跳转到博客页面），严重影响使用体验。oschina:在对conding失去信心之后，一直想寻找一个新的平台，之后发现的阿里的oschina，可搭建好不久就发现了oschina是不支持自定义域名的，每次访问要输入一串oschina这么丑的名字，确实揪心。百度云“应用引擎BAE”-博客托管Hexo的配置就不多说了，网上一堆教程，方法步骤都是相同的，这里仅仅介绍百度云“应用引擎BAE”的配置1. 登陆百度云https://cloud.baidu.com/ ,点击应用引擎BAE，并添加部署2. 选择：模板类型选择：所有模板模板场景：所有域名:随意输入类型：lighttpd-static (必须选择这个)代码版本：git(必须选择这个)单元套餐：均选择最低(内存:64M，磁盘:2GB，宽带:5Mb/s),这个带宽确实很良心，买虚拟云主机最低配的带宽才1Mb/s，最后勾选：同意 百度应用引擎服务协议、BAE域名绑定服务协议，下一步，之后支付3. 等待系统部署结束支付完成后再次回到应用引擎BAE–&gt;BAT基础版本–&gt;部署列表，等待系统部署介绍，待状态显示正常(等待大约10秒左右)4. 修改发布设置在操作栏下，下拉箭头，查看发布设置，找到代码仓库的git地址，修改hexo配置文件里设置的git提交的仓库即可，需要注意的一点是，系统默认是不自动更新页面git提交的内容的，需要将自动发布设置设为开即可5. hexo deploy错误这个错误是百度云-BAE的git配置存在问题，只需在hexo deploy执行前修改下参数即可hexo提交报错信息如下，意思http curl的的长度不够，Everything up-to-dateFATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlError: fatal: The remote end hung up unexpectedlyfatal: The remote end hung up unexpectedlyerror: RPC failed; HTTP 411 curl 22 The requested URL returned error: 411 Length RequiredEverything up-to-date修改git 配置，增加git传输的字节限制git config –global http.postBuffer 5242880006. 资源占用7. BAE使用限制1、如果自定义域名，要求域名需要备案，不过直接使用BAE就可以为域名进行备案2、BAE只支持，单一master分支，不能够创建git分支，如果提交分支会被拒绝，无法对md源文件使用分支进行保存，因此依旧将source源文件托管在github上、报错提示如下12345678910$ git push --set-upstream origin branch-sourceCounting objects: 214, done.Delta compression using up to 8 threads.Compressing objects: 100% (140/140), done.Writing objects: 100% (214/214), 1.51 MiB | 118.64 MiB/s, done.Total 214 (delta 38), reused 197 (delta 32)remote: Error: You can only submit code by master.To https://git.duapp.com/appid8c8oabpava ! [remote rejected] branch-source -&gt; branch-source (pre-receive hook declined)error: failed to push some refs to &apos;https://git.duapp.com/appid8c8oabpava&apos;总结静态博客快速搭建只需要三点：其一：静态网页生成工具，如Hexo、Jekyll、Octopress其二：静态网页托管环境，如lighttpd，nginx，apache，httpd其三：博客管理工具,通常使用git进行管理]]></content>
@@ -35,8 +22,8 @@
         <category>Spark</category>
       </categories>
       <tags>
-        <tag>SparkJob</tag>
         <tag>WordCount</tag>
+        <tag>SparkJob</tag>
       </tags>
   </entry>
   <entry>
@@ -48,18 +35,9 @@
         <category>Spark</category>
       </categories>
       <tags>
-        <tag>WordCount</tag>
         <tag>SparkShell</tag>
+        <tag>WordCount</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Centos7 安装 Ansible]]></title>
-    <url>%2Fbigdata%2Fansible%2Fcentos7-install-ansible%2F</url>
-    <content type="text"><![CDATA[Centos7 64位 在线、离线安装Ansible系统环境系统：Centos7 64位rpm在线安装Ansible1234567# 安装EPEL源 yum install wgetwget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpmrpm -ivh epel-release-latest-7.noarch.rpm# 安装ansibleyum install ansiblerpm离线安装Ansible由于没有直观的网址下载rpm包，因此最简单的方法是新建一台最小化安装的CentOs7虚拟机，之后修改/etc/yum.conf，将keepcache=0修改为keepcache=1，之后使用在线安装的方式安装ansible，在cash目录：cachedir=/var/cache/yum/下寻找所有的依赖包。根据在线安装的屏显顺序手工安装rpm包在线安装的屏显信息123456789101112131415161718192021Running transaction警告：RPM 数据库已被非 yum 程序修改。 正在安装 : python-six-1.9.0-2.el7.noarch 1/19 正在安装 : python2-ecdsa-0.13-4.el7.noarch 2/19 正在安装 : sshpass-1.06-1.el7.x86_64 3/19 正在安装 : python-babel-0.9.6-8.el7.noarch 4/19 正在安装 : libtommath-0.42.0-5.el7.x86_64 5/19 正在安装 : libtomcrypt-1.17-25.el7.x86_64 6/19 正在安装 : python2-crypto-2.6.1-13.el7.x86_64 7/19 正在安装 : python2-paramiko-1.16.1-2.el7.noarch 8/19 正在安装 : python-backports-1.0-8.el7.x86_64 9/19 正在安装 : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch 10/19 正在安装 : python-setuptools-0.9.8-4.el7.noarch 11/19 正在安装 : python2-pyasn1-0.1.9-7.el7.noarch 12/19 正在安装 : python-keyczar-0.71c-2.el7.noarch 13/19 正在安装 : python-httplib2-0.7.7-3.el7.noarch 14/19 正在安装 : python-markupsafe-0.11-10.el7.x86_64 15/19 正在安装 : python-jinja2-2.7.2-2.el7.noarch 16/19 正在安装 : libyaml-0.1.4-11.el7_0.x86_64 17/19 正在安装 : PyYAML-3.10-11.el7.x86_64 18/19 正在安装 : ansible-2.3.1.0-1.el7.noarch 19/19离线安装脚本如下：1234567891011121314151617181920# 安装包名称即在上一步安装名称后加.rpm后缀（建议使用列编辑器编写安装脚本） rpm -ivh python-six-1.9.0-2.el7.noarch.rpmrpm -ivh python2-ecdsa-0.13-4.el7.noarch.rpmrpm -ivh sshpass-1.06-1.el7.x86_64.rpmrpm -ivh python-babel-0.9.6-8.el7.noarch.rpmrpm -ivh libtommath-0.42.0-5.el7.x86_64.rpmrpm -ivh libtomcrypt-1.17-25.el7.x86_64.rpmrpm -ivh python2-crypto-2.6.1-13.el7.x86_64.rpmrpm -ivh python2-paramiko-1.16.1-2.el7.noarch.rpmrpm -ivh python-backports-1.0-8.el7.x86_64.rpmrpm -ivh python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch.rpmrpm -ivh python-setuptools-0.9.8-4.el7.noarch.rpmrpm -ivh python2-pyasn1-0.1.9-7.el7.noarch.rpmrpm -ivh python-keyczar-0.71c-2.el7.noarch.rpmrpm -ivh python-httplib2-0.7.7-3.el7.noarch.rpmrpm -ivh python-markupsafe-0.11-10.el7.x86_64.rpmrpm -ivh python-jinja2-2.7.2-2.el7.noarch.rpmrpm -ivh libyaml-0.1.4-11.el7_0.x86_64.rpmrpm -ivh PyYAML-3.10-11.el7.x86_64.rpmrpm -ivh ansible-2.3.1.0-1.el7.noarch.rpm]]></content>
-      <categories>
-        <category>Bigdata</category>
-        <category>Ansible</category>
-      </categories>
   </entry>
   <entry>
     <title><![CDATA[centos7 在线安装 Ambari （一）]]></title>
@@ -73,6 +51,15 @@
         <tag>Centos7</tag>
         <tag>Ambari</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos7 安装 Ansible]]></title>
+    <url>%2Fbigdata%2Fansible%2Fcentos7-install-ansible%2F</url>
+    <content type="text"><![CDATA[Centos7 64位 在线、离线安装Ansible系统环境系统：Centos7 64位rpm在线安装Ansible1234567# 安装EPEL源 yum install wgetwget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpmrpm -ivh epel-release-latest-7.noarch.rpm# 安装ansibleyum install ansiblerpm离线安装Ansible由于没有直观的网址下载rpm包，因此最简单的方法是新建一台最小化安装的CentOs7虚拟机，之后修改/etc/yum.conf，将keepcache=0修改为keepcache=1，之后使用在线安装的方式安装ansible，在cash目录：cachedir=/var/cache/yum/下寻找所有的依赖包。根据在线安装的屏显顺序手工安装rpm包在线安装的屏显信息123456789101112131415161718192021Running transaction警告：RPM 数据库已被非 yum 程序修改。 正在安装 : python-six-1.9.0-2.el7.noarch 1/19 正在安装 : python2-ecdsa-0.13-4.el7.noarch 2/19 正在安装 : sshpass-1.06-1.el7.x86_64 3/19 正在安装 : python-babel-0.9.6-8.el7.noarch 4/19 正在安装 : libtommath-0.42.0-5.el7.x86_64 5/19 正在安装 : libtomcrypt-1.17-25.el7.x86_64 6/19 正在安装 : python2-crypto-2.6.1-13.el7.x86_64 7/19 正在安装 : python2-paramiko-1.16.1-2.el7.noarch 8/19 正在安装 : python-backports-1.0-8.el7.x86_64 9/19 正在安装 : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch 10/19 正在安装 : python-setuptools-0.9.8-4.el7.noarch 11/19 正在安装 : python2-pyasn1-0.1.9-7.el7.noarch 12/19 正在安装 : python-keyczar-0.71c-2.el7.noarch 13/19 正在安装 : python-httplib2-0.7.7-3.el7.noarch 14/19 正在安装 : python-markupsafe-0.11-10.el7.x86_64 15/19 正在安装 : python-jinja2-2.7.2-2.el7.noarch 16/19 正在安装 : libyaml-0.1.4-11.el7_0.x86_64 17/19 正在安装 : PyYAML-3.10-11.el7.x86_64 18/19 正在安装 : ansible-2.3.1.0-1.el7.noarch 19/19离线安装脚本如下：1234567891011121314151617181920# 安装包名称即在上一步安装名称后加.rpm后缀（建议使用列编辑器编写安装脚本） rpm -ivh python-six-1.9.0-2.el7.noarch.rpmrpm -ivh python2-ecdsa-0.13-4.el7.noarch.rpmrpm -ivh sshpass-1.06-1.el7.x86_64.rpmrpm -ivh python-babel-0.9.6-8.el7.noarch.rpmrpm -ivh libtommath-0.42.0-5.el7.x86_64.rpmrpm -ivh libtomcrypt-1.17-25.el7.x86_64.rpmrpm -ivh python2-crypto-2.6.1-13.el7.x86_64.rpmrpm -ivh python2-paramiko-1.16.1-2.el7.noarch.rpmrpm -ivh python-backports-1.0-8.el7.x86_64.rpmrpm -ivh python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch.rpmrpm -ivh python-setuptools-0.9.8-4.el7.noarch.rpmrpm -ivh python2-pyasn1-0.1.9-7.el7.noarch.rpmrpm -ivh python-keyczar-0.71c-2.el7.noarch.rpmrpm -ivh python-httplib2-0.7.7-3.el7.noarch.rpmrpm -ivh python-markupsafe-0.11-10.el7.x86_64.rpmrpm -ivh python-jinja2-2.7.2-2.el7.noarch.rpmrpm -ivh libyaml-0.1.4-11.el7_0.x86_64.rpmrpm -ivh PyYAML-3.10-11.el7.x86_64.rpmrpm -ivh ansible-2.3.1.0-1.el7.noarch.rpm]]></content>
+      <categories>
+        <category>Bigdata</category>
+        <category>Ansible</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[centos7 离线rpm包安装mysql数据库]]></title>
